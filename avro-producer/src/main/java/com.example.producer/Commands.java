@@ -21,7 +21,7 @@ public class Commands {
       this.template = template;
     }
 
-    @ShellMethod("add user to send")
+    @ShellMethod("add user to list for send")
     public void add(String name, int age) {
         GenericRecord record = new GenericData.Record(SchemaRepository.instance().getSchemaObject());
         record.put("name", name);
@@ -30,7 +30,7 @@ public class Commands {
         records.add(record);
     }
 
-    @ShellMethod("send user to Kafka")
+    @ShellMethod("send list users to Kafka")
     public void send() {
         template.setDefaultTopic("test");
         template.sendDefault("1", records);

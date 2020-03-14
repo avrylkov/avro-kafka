@@ -21,10 +21,6 @@ public class SchemaRepository {
       return INSTANCE;
     }
 
-    public String getSchema() {
-       return SCHEMA;
-    }
-
     public Schema getSchemaObject() {
         return SCHEMA_OBJECT;
     }
